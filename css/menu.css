@@ -148,7 +148,6 @@ nav .hamburger.show .close {
     .nav-btn {
         grid-area: nav-btn;
         justify-self: flex-end;
-        padding: 0.5rem 1.5rem;
     }
 }
 
