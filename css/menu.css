@@ -142,7 +142,6 @@ nav .hamburger.show .close {
 
     nav ul a {
         color: var(--dark-blue);
-        font-size: 0.85rem;
         font-weight: 300;
     }
 
