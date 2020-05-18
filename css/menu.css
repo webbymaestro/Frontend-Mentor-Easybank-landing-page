@@ -1,0 +1,231 @@
+:root {
+
+    /* Primary Colors */
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+
+    /* Secondary Colors */
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Header and Nav */
+
+button {
+    border: none;
+    background: transparent;
+}
+
+.menu-nav {
+    background-color: var(--white);
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.menu-nav .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "logo ham"
+    "list list";
+    padding: 1rem 0;
+}
+
+.hamburger {
+    position: relative;
+    grid-area: ham;
+    align-self: center;
+    justify-self: end;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.logo {
+    position: relative;
+    align-self: center;
+    grid-area: logo;
+}
+
+#mobile {
+    grid-area: list;
+}
+.menu-nav .btn {
+    display: none;
+}
+
+nav #mobile ul {
+    position: relative;
+    transform: scale(0);
+    transform: translateY(-500px);
+    transition: all ease-in-out 0.5s;
+    text-align: center;
+    z-index: 1;
+}
+
+nav #mobile.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 4rem;
+    left: 0;
+    align-items: center;
+}
+
+nav #mobile.show::after {
+    content:'';
+    background: linear-gradient(180deg, var(--dark-blue), var(--grayish-blue));
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+nav #mobile.show ul {
+    background: white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1.5rem 0;
+    width: 85%;
+    text-align: center;
+    color: black;
+    transform: scale(1);
+    transition: all ease-in-out 0.5s;
+    z-index: 1;
+}
+
+nav ul li {
+    padding: 0.7rem 0;
+}
+
+nav ul a {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+nav ul a:hover {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+nav .hamburger .close {
+    display: none;
+}
+
+nav .hamburger.show .open {
+    display: none;
+}
+
+nav .hamburger.show .close {
+    display: block;
+}
+
+.main-menu-mobile {
+    background: white;
+}
+
+@media (min-width: 920px) {
+    
+    /* Header and Nav */
+    .menu-nav .container {
+        grid-template-columns: 3fr 8fr 3fr;
+    }
+
+    nav ul a {
+        color: var(--dark-blue);
+        font-size: 0.85rem;
+        font-weight: 300;
+    }
+
+    .nav-btn {
+        grid-area: nav-btn;
+        justify-self: flex-end;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    
+    /* Header and Nav */
+    .menu-nav {
+        position: fixed;
+        width: 100%;
+        height: 4.5rem;
+        padding: 0;
+        background-color: var(--white);
+        z-index: 2;
+    }
+
+    .menu-nav .container {
+        grid-template-columns: 2fr 7fr 2fr;
+        grid-template-areas: "logo main-menu nav-btn";
+        gap: 1rem;
+        align-items: baseline;
+    }
+
+    .logo {
+        grid-area: logo;
+        align-self: baseline;
+        justify-self: flex-start;
+    }
+    
+
+    .hamburger {
+        display: none;
+    }
+
+    #mobile {
+        grid-area: main-menu;
+        justify-self: center;
+    }
+
+    .nav-btn {
+        grid-area: nav-btn;
+        justify-self: flex-end;
+    }
+
+    nav #mobile ul {
+        position: relative;
+        transform: scale(1);
+        transform: translateY(0px);
+        transition: none;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-menu li {
+        margin: 0 1rem;
+    }
+
+    .main-menu li:hover {
+        color: var(--dark-blue);
+        border-bottom: var(--lime-green) solid 3px;
+    }
+    
+    .main-menu a {
+        color: var(--grayish-blue);
+        height: 4rem;
+    }
+
+    .menu-nav .btn {
+        display: block;
+        text-align: center;
+    }
+
+}
+
+
