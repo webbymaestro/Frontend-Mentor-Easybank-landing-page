@@ -272,7 +272,7 @@ footer .btn {
         text-align: left;
         margin: auto;
         margin-left: 29%;
-        padding: 9.5rem 0;
+        padding: 15rem 0;
         display: grid;
         align-content: center;
         align-items: center;
@@ -294,7 +294,7 @@ footer .btn {
         background: url(/images/bg-intro-desktop.svg);
         background-position: bottom left;
         background-repeat: no-repeat;
-        background-size: 950px, cover;
+        background-size: 1200px, cover;
     }
     
     .hero-mockup {
@@ -303,12 +303,12 @@ footer .btn {
         right: -14%;
         padding: 0;
         margin: 0;
-        width: 75%;
+        width: 95%;
     }
 
     /* Easybank Section */
     .easy {
-        margin-top: -2rem;
+        margin-top: -4rem;
     }
 
     .easy-grid {
@@ -399,6 +399,5 @@ footer .btn {
     .attribution {
         text-align: end;
     }
-
     
 }
