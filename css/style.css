@@ -265,6 +265,7 @@ footer .btn {
         /* height: 75vh; */
         background: none;
         margin: auto;
+        overflow-x: hidden;
     }
     
     .hero-content {
